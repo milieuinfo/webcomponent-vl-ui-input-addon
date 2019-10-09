@@ -3,7 +3,7 @@ version: 2
 plan:
   project-key: WEBCO
   key: WEBCOMPONENTVLINPUTADDON
-  name: webcomponent-webcomponent-vl-input-addon
+  name: webcomponent-vl-input-addon
 
 triggers:
   - polling: 130
