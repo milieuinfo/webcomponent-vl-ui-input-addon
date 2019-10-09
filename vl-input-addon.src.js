@@ -1,4 +1,4 @@
-import { VlElement, NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
+import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 
 export const VlInputAddonElement = (SuperClass) => {
     return class extends NativeVlElement(SuperClass) {
@@ -15,9 +15,9 @@ export const VlInputAddonElement = (SuperClass) => {
 /**
  * VlInput-addon
  * @class
- * @classdesc 
+ * @classdesc Gebruik de input-addon in combinatie met de vl-ui-input-group webcomponent. Deze combinatie zorgt ervoor dat de gebruiker extra informatie ontvangt over de inhoud of de vorm van de inhoud dat ingevuld moet worden.
  * 
- * @extends VlElement
+ * @extends NativeVlElement
  * 
  * @property 
  * 
@@ -26,14 +26,6 @@ export const VlInputAddonElement = (SuperClass) => {
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-input-addon.html|Demo}
  * 
  */
-export class VlInputAddon extends VlInputAddonElement(HTMLParagraphElement) {
-    static get _observedAttributes() {
-        return ['data-vl-tooltip-content'];
-    }
-
-    _data_vl_tooltip_contentChangedCallback(oldValue, newValue) {
-        console.log(oldValue + ' - ' + newValue);
-    }
-}
+export class VlInputAddon extends VlInputAddonElement(HTMLParagraphElement) {}
 
 define('vl-input-addon', VlInputAddon, {extends: 'p'});
