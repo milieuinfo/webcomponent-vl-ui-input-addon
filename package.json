@@ -26,12 +26,15 @@
   },
   "homepage": "https://github.com/milieuinfo/webcomponent-vl-input-addon#readme",
   "dependencies": {
-    "vl-ui-util": "^1.2.23",
-    "vl-ui-core": "^1.4.6",
+    "vl-ui-core": "^2.0.0",
+    "vl-ui-tooltip": "^1.0.11",
     "replace": "^1.1.1"
   },
   "devDependencies": {
+    "@govflanders/vl-ui-input-addon": "3.9.1",
+    "@govflanders/vl-ui-util": "3.9.1",
     "np": "3.0.4",
+    "vl-ui-util": "^2.0.0",
     "web-component-tester": "6.9.2"
   }
 }

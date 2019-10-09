@@ -1,20 +1,16 @@
-import { VlElement } from '/node_modules/vl-ui-core/vl-core.js';
+import { VlElement, NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 
-(() => {
-    loadScript('util.js', '../node_modules/@govflanders/vl-ui-util/dist/js/util.js', () => {
-        loadScript('input-addon.js', '../node_modules/@govflanders/vl-ui-input-addon/dist/js/input-addon.js')
-    });
-  
-    function loadScript(id, src, onload) {
-        if (!document.head.querySelector('#' + id)) {
-            let script = document.createElement('script');
-            script.setAttribute('id', id);
-            script.setAttribute('src', src);
-            script.onload = onload;
-            document.head.appendChild(script);
+export const VlInputAddonElement = (SuperClass) => {
+    return class extends NativeVlElement(SuperClass) {
+        connectedCallback() {
+            this.classList.add('vl-input-addon');
+        }
+
+        get _stylePath() {
+            return '../style.css';
         }
     }
- })();
+}
 
 /**
  * VlInput-addon
@@ -30,10 +26,14 @@ import { VlElement } from '/node_modules/vl-ui-core/vl-core.js';
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-input-addon.html|Demo}
  * 
  */
-export class VlInput-addon extends VlElement(HTMLElement) {
+export class VlInputAddon extends VlInputAddonElement(HTMLParagraphElement) {
+    static get _observedAttributes() {
+        return ['data-vl-tooltip-content'];
+    }
 
-
-
+    _data_vl_tooltip_contentChangedCallback(oldValue, newValue) {
+        console.log(oldValue + ' - ' + newValue);
+    }
 }
 
-customElements.define('vl-input-addon', VlInput-addon);
+define('vl-input-addon', VlInputAddon, {extends: 'p'});
