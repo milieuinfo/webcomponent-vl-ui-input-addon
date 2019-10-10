@@ -2,8 +2,8 @@
 version: 2
 plan:
   project-key: WEBCO
-  key: WEBCOMPONENTVLINPUTADDON
-  name: webcomponent-vl-input-addon
+  key: VLUIINPUTADDON
+  name: webcomponent-vl-ui-input-addon
 
 triggers:
   - polling: 130
@@ -48,7 +48,7 @@ Release:
 ---
 version: 2
 plan:
-  key: WEBCOMPONENTVLINPUTADDON
+  key: VLUIINPUTADDON
 
 plan-permissions:
   - groups:
