@@ -37,6 +37,7 @@
     "np": "3.0.4",
     "vl-ui-util": "^2.0.0",
     "wct-browser-legacy": "1.0.2",
-    "web-component-tester": "6.9.2"
+    "web-component-tester": "6.9.2",
+    "uglify-js-es6": "2.8.9"
   }
 }
