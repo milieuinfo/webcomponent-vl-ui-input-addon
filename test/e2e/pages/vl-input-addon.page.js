@@ -1,6 +1,5 @@
 const VlInputAddon = require('../components/vl-input-addon');
-const { Page } = require('vl-ui-core');
-const { Config } = require('vl-ui-core');
+const { Page, Config } = require('vl-ui-core').Test;
 
 class VlInputAddonPage extends Page {
     async _getInputAddon(selector) {
