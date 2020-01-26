@@ -8,4 +8,11 @@ describe('vl-input-addon', async () => {
     before(() => {
         return vlInputAddonPage.load();
     });
+
+    after((done) => { 
+        if (driver) {
+            driver.quit();
+        }
+        done();
+    });
 });
