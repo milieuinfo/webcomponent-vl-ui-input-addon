@@ -1,5 +1,5 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlInputAddonPage = require('./pages/vl-input-addon.page');
 
 describe('vl-input-addon', async () => {
