@@ -69,4 +69,5 @@
     "@govflanders/vl-ui-util": "^3.9.1",
     "vl-ui-tooltip": "^2.0.0",
     "vl-ui-util": "^4.0.0"
+  }
 }
