@@ -1,20 +1,18 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlInputAddonPage = require('./pages/vl-input-addon.page');
 
 describe('vl-input-addon', async () => {
     const vlInputAddonPage = new VlInputAddonPage(driver);
 
-    before((done) => {
-        vlInputAddonPage.load().then(() => {
-            done()
-        });
+    before(() => {
+        return vlInputAddonPage.load();
     });
 
-  after((done) => {
-      if(driver) {
-          driver.quit();
-          done();
-      }
-  })
+    after((done) => { 
+        if (driver) {
+            driver.quit();
+        }
+        done();
+    });
 });
