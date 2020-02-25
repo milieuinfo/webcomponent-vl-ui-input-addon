@@ -9,10 +9,7 @@ describe('vl-input-addon', async () => {
         return vlInputAddonPage.load();
     });
 
-    after((done) => { 
-        if (driver) {
-            driver.quit();
-        }
-        done();
+    it("Dummy test om browsers te laten sluiten", () => {
+    	assert.isTrue(true);
     });
 });
