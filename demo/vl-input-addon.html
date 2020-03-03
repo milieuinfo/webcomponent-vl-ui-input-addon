@@ -4,10 +4,10 @@
         <title>vl-input-addon voorbeeld</title>
         <script type="module" src="demo.js"></script>
         <script type="module" src="/src/vl-input-addon.js"></script>
-        <script type="module" src="/node_modules/vl-ui-tooltip/vl-tooltip.js"></script>
+        <script type="module" src="/node_modules/vl-ui-tooltip/dist/vl-tooltip.js"></script>
 
         <link rel="stylesheet" type="text/css" href="/src/style.css"/>
-        <link rel="stylesheet" type="text/css" href="/node_modules/vl-ui-tooltip/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/node_modules/vl-ui-tooltip/dist/style.css"/>
     </head>
 
 	<body>
@@ -26,7 +26,7 @@
                 </code>
             </pre>
             <div class="demo">
-                <p is="vl-input-addon">
+                <p is="vl-input-addon" id="input-addon">
                     €
                 </p>
             </div>
@@ -45,7 +45,7 @@
             <div class="demo">
                 <p is="vl-input-addon">
                     €
-                    <vl-tooltip placement="top">Euro</vl-tooltip>
+                    <vl-tooltip id="tooltip" placement="top">Euro</vl-tooltip>
                 </p>
             </div>
         </div>

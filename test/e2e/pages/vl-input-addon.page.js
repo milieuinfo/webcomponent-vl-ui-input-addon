@@ -1,5 +1,6 @@
 const VlInputAddon = require('../components/vl-input-addon');
 const { Page, Config } = require('vl-ui-core').Test;
+const { VlTooltip } = require('vl-ui-tooltip').Test;
 
 class VlInputAddonPage extends Page {
     async _getInputAddon(selector) {
@@ -8,6 +9,14 @@ class VlInputAddonPage extends Page {
 
     async load() {
         await super.load(Config.baseUrl + '/demo/vl-input-addon.html');
+    }
+
+    async getInputAddon() {
+        return this._getInputAddon('#input-addon');
+    }
+
+    async getTooltipFromInputAddon() {
+        return new VlTooltip(this.driver, '#tooltip');
     }
 }
 

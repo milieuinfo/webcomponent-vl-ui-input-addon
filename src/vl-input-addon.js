@@ -6,7 +6,7 @@ export const VlInputAddonElement = (SuperClass) => {
             this.classList.add('vl-input-addon');
         }
     }
-}
+};
 
 /**
  * VlInput-addon
