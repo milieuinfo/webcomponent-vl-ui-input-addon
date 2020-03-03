@@ -14,7 +14,7 @@ describe('vl-input-addon', async () => {
     	await assert.eventually.equal(inputAddon.getText(), '€');
     });
 
-    it('Als gebruiker kan ik een tooltip zien op een input-addon', async () => {
+    it('Als gebruiker kan ik de tekst van een tooltip op een input-addon raadplegen', async () => {
         const tooltip = await vlInputAddonPage.getTooltipFromInputAddon();
         await assert.eventually.equal(tooltip.getText(), 'Euro');
     });
