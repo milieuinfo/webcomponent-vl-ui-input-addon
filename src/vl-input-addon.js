@@ -22,4 +22,8 @@ export const VlInputAddonElement = (SuperClass) => {
  */
 export class VlInputAddon extends VlInputAddonElement(HTMLParagraphElement) {}
 
+export class VlButtonInputAddon extends VlInputAddonElement(NativeVlElement(HTMLButtonElement)) {} 
+
+
 define('vl-input-addon', VlInputAddon, {extends: 'p'});
+define('vl-button-input-addon', VlButtonInputAddon, {extends: 'button'});
