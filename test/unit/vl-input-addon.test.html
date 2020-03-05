@@ -16,6 +16,12 @@
     </template>
   </test-fixture>
 
+  <test-fixture id="vl-button-input-addon-fixture">
+    <template>
+      <button is="vl-button-input-addon"></button>
+    </template>
+  </test-fixture>
+
   <script>
     suite('<vl-input-addon>', () => {
       const should = chai.should();
@@ -23,6 +29,11 @@
       test('input addon bevat juiste type class', () => {
         const inputAddon = fixture('vl-input-addon-fixture');
         assert.isTrue(inputAddon.classList.contains('vl-input-addon'));
+      });
+
+      test('input addon variant bevat juiste type class', () => {
+        const inputAddonButton = fixture('vl-button-input-addon-fixture');
+        assert.isTrue(inputAddonButton.classList.contains('vl-input-addon'));
       });
     });
   </script>
