@@ -36,7 +36,7 @@ export const VlInputAddonElement = (SuperClass) => {
 export class VlInputAddon extends VlInputAddonElement(HTMLParagraphElement) {}
 
 /**
- * VlButton-Input-addon
+ * VlButtonInputAddon
  * @class
  * @classdesc Gebruik de button-input-addon in combinatie met de vl-ui-input-group webcomponent. Deze combinatie maakt de input-addon clickable.
  * 
