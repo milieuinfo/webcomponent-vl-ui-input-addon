@@ -24,8 +24,6 @@
 
   <script>
     suite('<vl-input-addon>', () => {
-      const should = chai.should();
-
       test('input addon bevat juiste type class', () => {
         const inputAddon = fixture('vl-input-addon-fixture');
         assert.isTrue(inputAddon.classList.contains('vl-input-addon'));
