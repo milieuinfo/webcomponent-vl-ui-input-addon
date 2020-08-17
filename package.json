@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-input-addon",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "Gebruik de input-addon in combinatie met de vl-ui-input-group webcomponent. Deze combinatie zorgt ervoor dat de gebruiker extra informatie ontvangt over de inhoud of de vorm van de inhoud dat ingevuld moet worden.",
   "author": "DIDM",
   "license": "MIT",
