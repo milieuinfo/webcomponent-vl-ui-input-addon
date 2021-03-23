@@ -10,6 +10,10 @@ describe('vl-input-addon', async () => {
     return vlInputAddonPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlInputAddonPage.hasWcagIssues());
+  });
+
   it('Als gebruiker kan ik de tekst zien van een input addon', async () => {
     const inputAddon = await vlInputAddonPage.getInputAddon();
     await assert.eventually.equal(inputAddon.getText(), '€');
