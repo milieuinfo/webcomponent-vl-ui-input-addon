@@ -14,12 +14,12 @@ describe('vl-input-addon', async () => {
     await assert.eventually.isFalse(vlInputAddonPage.hasWcagIssues());
   });
 
-  it('Als gebruiker kan ik de tekst zien van een input addon', async () => {
+  it('als gebruiker kan ik de tekst zien van een input addon', async () => {
     const inputAddon = await vlInputAddonPage.getInputAddon();
     await assert.eventually.equal(inputAddon.getText(), '€');
   });
 
-  it('Als gebruiker kan ik de tekst van een tooltip op een input-addon raadplegen', async () => {
+  it('als gebruiker kan ik de tekst van een tooltip op een input-addon raadplegen', async () => {
     const tooltip = await vlInputAddonPage.getTooltipFromInputAddon();
     await assert.eventually.equal(tooltip.getText(), 'Euro');
   });
