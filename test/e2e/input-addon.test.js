@@ -10,12 +10,16 @@ describe('vl-input-addon', async () => {
     return vlInputAddonPage.load();
   });
 
-  it('Als gebruiker kan ik de tekst zien van een input addon', async () => {
-    const inputAddon = await vlInputAddonPage.getInputAddon();
-    await assert.eventually.equal(inputAddon.getText(), '€');
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlInputAddonPage.hasWcagIssues());
   });
 
-  it('Als gebruiker kan ik de tekst van een tooltip op een input-addon raadplegen', async () => {
+  it('als gebruiker kan ik de tekst zien van een input addon', async () => {
+    const inputAddon = await vlInputAddonPage.getInputAddon();
+    await assert.eventually.include(inputAddon.getText(), '€');
+  });
+
+  it('als gebruiker kan ik de tekst van een tooltip op een input-addon raadplegen', async () => {
     const tooltip = await vlInputAddonPage.getTooltipFromInputAddon();
     await assert.eventually.equal(tooltip.getText(), 'Euro');
   });
@@ -23,7 +27,6 @@ describe('vl-input-addon', async () => {
   it('als gebruiker zie ik een input addon', async () => {
     const inputAddonButton = await vlInputAddonPage.getInputAddonButton();
     await assert.eventually.isTrue(inputAddonButton.isDisplayed());
-    await assert.eventually.isFalse(inputAddonButton.hasText());
     const inputAddonButtonIcon = await inputAddonButton.getIcon();
     await assert.eventually.isTrue(inputAddonButtonIcon.isDisplayed());
     await assert.eventually.equal(inputAddonButtonIcon.getType(), 'location');
